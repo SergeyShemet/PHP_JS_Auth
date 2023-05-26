@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:Raleway;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(0deg, rgba(138,138,255,1) 0%, rgba(0,212,255,1) 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login_container {
+    
+    width: 100%;
+    display: flex;
+    margin: 20px;
+    max-width: 850px;
+    max-height: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    opacity: 0%;
+    transition: margin 0.5s ease-in;
+    transition: opacity 0.5s ease-out;
+    display: none;
+}
+
+.login {
+    width: 100%;
+}
+
+#login_success_container {
+    max-width: 500px;
+    min-width: 200px;
+    max-height: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    display: none;
+    opacity: 0;
+    transition: margin 0.5s ease-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#success_text {
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile_card {
+    display: flex;
+    padding: 5px;
+    margin: 20px;
+    max-height: 600px; 
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    opacity: 0%;
+    display: none;
+    transition: opacity 0.5s ease-in;
+}
+
+.card {
+    width: 100%;
+    padding: 20px;
+}
+
+.profile_pic img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    max-width: 350px;
+}
+
+form {
+    width: 250px;
+    margin: 60px auto;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    margin: 10px;   
+}
+
+hr {
+    border-top: 2px solid #36a4ee;
+}
+
+.pic img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    min-width: 200px; 
+}
+
+
+
+form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+input {
+    position: relative;
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(222, 222, 222);
+    z-index: 2;
+    
+}
+#login_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.enter_btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 252px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #2980b9;
+    transition: background-color 0.4s;
+}
+
+#logout_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logout_btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 252px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: coral;
+    transition: background-color 0.4s;
+}
+
+
+.enter_btn:hover {
+    background: rgb(0, 83, 217);
+}
+
+.logout_btn:hover {
+    background: rgb(255, 44, 44);
+}
+
+.logout_btn:active {
+    background: rgb(112, 0, 0) ;
+}
+
+
+p {
+    margin: 20px;
+}
+
+.error_line {
+    width: 100%;
+    border-radius: 5px;
+    background-color: pink;
+    color: rgb(255, 74, 74);
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+    padding: 3px;
+}
+.error_line:empty {
+    display: none;
+}
+
+.validation {
+    position: relative;
+    width: 100%;
+    background: rgb(137, 235, 255);
+    color: rgb(41, 184, 255);
+    margin: -25px 2px 0 2px;
+    padding: 7px 3px 3px 3px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: margin 0.1s linear;
+    z-index: 0;
+}
+
+
+@media (max-width: 767px) {
+
+    .login_container {
+        flex-direction: column;
+        max-height: 850px;
+    }
+
+    .pic img {
+        height: 200px;
+        width: 100%;
+
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .profile_card {
+        flex-direction: column;
+        max-height: 750px;
+        
+        
+    }
+
+    .profile_pic img {
+        height: 400px;
+        width: 100%;
+        max-width: 1000px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
