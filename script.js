@@ -58,7 +58,7 @@ async function showcard(user) {                 // присваиваем дан
     document.getElementById("name").innerHTML = user.name;
     document.getElementById("email").innerHTML = "E-mail: " + user.email;
     document.getElementById("date_of_birth").innerHTML = "Дата рождения: " + date_format(user.date_of_birth);
-    user.photo_url ?                                    // Пока показываем окошко приветствия - грузим фотку в браузер
+    user.photo_url ?
             document.getElementById("card_img_url").src = user.photo_url 
         :   document.getElementById("card_img_url").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png";
     let card = document.getElementById("profile_card");
